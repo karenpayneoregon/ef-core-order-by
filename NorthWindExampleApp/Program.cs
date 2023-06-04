@@ -10,6 +10,8 @@ internal partial class Program
     static async Task Main(string[] args)
     {
 
+        var custs = await CustomerExamples.ConventionalOrderByOnNavigationFlexible();
+
         await ProductsExamples.InefficientDemo("ProductName");
         await ProductsExamples.EfficientDemo("ProductName");
 

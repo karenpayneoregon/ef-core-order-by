@@ -22,6 +22,17 @@ internal class CustomerExamples
             .OrderByDescending(c => c.ContactTypeIdentifierNavigation.ContactTitle)
             .ToListAsync();
     }
+    public static async Task<List<Customers>> ConventionalOrderByOnNavigationFlexible()
+    {
+        await using var context = new Context();
+
+        return await context.Customers
+            .Include(c => c.CountryIdentifierNavigation)
+            .Include(c => c.Contact)
+            .Include(c => c.ContactTypeIdentifierNavigation)
+            .OrderByColumnDescending("ContactTypeIdentifierNavigation.ContactTitle")
+            .ToListAsync();
+    }
     /// <summary>
     /// Dynamic column top level ordering
     /// </summary>
