@@ -19,6 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerLibrary", "SqlServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWindExampleApp2", "NorthWindExampleApp2\NorthWindExampleApp2.csproj", "{E6485781-F467-452B-A0FA-E201CFCC33A9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend projects", "Frontend projects", "{1B35F4A8-657B-401A-B552-CF5BD5EFE1C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWindExampleApp3", "NorthWindExampleApp3\NorthWindExampleApp3.csproj", "{03CCFFED-A7C4-4473-AE76-95A4C40182C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,13 +45,20 @@ Global
 		{E6485781-F467-452B-A0FA-E201CFCC33A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6485781-F467-452B-A0FA-E201CFCC33A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6485781-F467-452B-A0FA-E201CFCC33A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03CCFFED-A7C4-4473-AE76-95A4C40182C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03CCFFED-A7C4-4473-AE76-95A4C40182C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03CCFFED-A7C4-4473-AE76-95A4C40182C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03CCFFED-A7C4-4473-AE76-95A4C40182C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{54BCC62B-6492-4EEB-A2CF-6BD89ED05CA3} = {34F4A075-2423-474B-8176-EB25DE9129E6}
+		{7121480B-4011-4419-8026-3C1DF11935C1} = {1B35F4A8-657B-401A-B552-CF5BD5EFE1C7}
 		{0A966C26-E5D5-4145-A50A-378523494607} = {34F4A075-2423-474B-8176-EB25DE9129E6}
+		{E6485781-F467-452B-A0FA-E201CFCC33A9} = {1B35F4A8-657B-401A-B552-CF5BD5EFE1C7}
+		{03CCFFED-A7C4-4473-AE76-95A4C40182C9} = {1B35F4A8-657B-401A-B552-CF5BD5EFE1C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {43516358-4E5B-4B41-9860-93DC24D125CF}
