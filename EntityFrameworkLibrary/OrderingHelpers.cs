@@ -26,7 +26,8 @@ public static class OrderingHelpers
         list = sortDirection switch
         {
             OrderingDirection.Ascending => list.AsQueryable().OrderBy(sortExpression).ToList(),
-            _ => list.AsQueryable().OrderByDescending(sortExpression).ToList()
+            _ => list.AsQueryable().OrderByDescending(sortExpression)
+                .ToList()
         };
 
         return list;
