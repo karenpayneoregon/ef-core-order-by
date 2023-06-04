@@ -2,7 +2,6 @@
 using NorthWindExampleApp.Classes;
 using NorthWindExampleApp.Data;
 using NorthWindExampleApp.Models;
-using Spectre.Console;
 
 namespace NorthWindExampleApp;
 
@@ -10,6 +9,9 @@ internal partial class Program
 {
     static async Task Main(string[] args)
     {
+
+        await ProductsExamples.InefficientDemo("ProductName");
+        await ProductsExamples.EfficientDemo("ProductName");
 
         List<Contacts> contacts = await ContactsExamples.OrderByContactTitleAscending();
         contacts.ToJson("contacts");

@@ -15,4 +15,25 @@ public class ProductsExamples
             .OrderByColumn("Category.CategoryName")
             .ToListAsync();
     }
+
+    /// <summary>
+    /// Worst
+    /// </summary>
+    /// <param name="columnName">name of column for order by</param>
+    /// <returns></returns>
+    public static async Task InefficientDemo(string columnName)
+    {
+        await using var context = new Context();
+        var products = context.Products.ToList().OrderByPropertyName(columnName);
+    }
+    /// <summary>
+    /// Best
+    /// </summary>
+    /// <param name="columnName">name of column for order by</param>
+    /// <returns></returns>
+    public static async Task EfficientDemo(string columnName)
+    {
+        await using var context = new Context();
+        var products = context.Products.OrderByColumn(columnName).ToList();
+    }
 }
