@@ -19,6 +19,7 @@ internal partial class Program
         /*
          * Order on navigation column
          */
+
         List<Product> products  = await context
             .Products
             .Include(p => p.Category)

@@ -8,4 +8,4 @@ Provides language extensions for performing order by for Entity Framework Core u
 
 ## Article
 
-To follow
+https://dev.to/karenpayneoregon/ef-core-order-by-string-column-name-4549
