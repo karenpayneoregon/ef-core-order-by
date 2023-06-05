@@ -54,10 +54,14 @@
                 @Html.DisplayNameFor(model => model.Customers[0].Contact.Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customers[0].ContactTypeIdentifierNavigation.ContactTitle)
+                <a asp-page="/CustomerView" asp-route-sortOrder="ContactTypeIdentifierNavigation.ContactTitle">
+                    @Html.DisplayNameFor(model => model.Customers[0].ContactTypeIdentifierNavigation.ContactTitle)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customers[0].CountryIdentifierNavigation.Name)
+                <a asp-page="/CustomerView" asp-route-sortOrder="CountryIdentifierNavigation.Name">
+                    @Html.DisplayNameFor(model => model.Customers[0].CountryIdentifierNavigation.Name)
+                </a>
             </th>
             <th></th>
         </tr>

@@ -2,13 +2,14 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace NorthWindExampleApp4.Models;
 
 public partial class Countries
 {
     public int CountryIdentifier { get; set; }
-
+    [Display(Name = "Country")]
     public string Name { get; set; }
 
     public virtual ICollection<Customers> Customers { get; } = new List<Customers>();
