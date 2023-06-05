@@ -11,10 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Information\readme.md" />
     <None Remove="readme.md" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Information\readme.md" />
     <Content Include="readme.md" />
   </ItemGroup>
 

@@ -25,7 +25,9 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Customers[0].CompanyName)
+                <a asp-page="/CustomerView" asp-route-sortOrder="CompanyName">
+                    @Html.DisplayNameFor(model => model.Customers[0].CompanyName)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Customers[0].Street)

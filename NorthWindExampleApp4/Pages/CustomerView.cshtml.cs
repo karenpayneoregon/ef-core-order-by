@@ -17,7 +17,8 @@ namespace NorthWindExampleApp4.Pages
         {
             _context = context;
         }
-
+        public string NameSort { get; set; }
+        public string CurrentSort { get; set; }
         public IList<Customers> Customers { get;set; } = default!;
 
         public SelectList ColumnList { get; set; }
@@ -27,11 +28,23 @@ namespace NorthWindExampleApp4.Pages
         [BindProperty]
         public int SelectedIndex { get; set; }
 
-        public async Task OnGetAsync()
+        /// <summary>
+        /// Shows how to do a sort via  asp-route and via select input from post event
+        /// </summary>
+        /// <param name="sortOrder">column name</param>
+        public async Task OnGetAsync(string sortOrder)
         {
             if (_context.Customers != null)
             {
-                Customers = await OrderByOnNavigation("CountryIdentifierNavigation.Name");
+                if (!string.IsNullOrWhiteSpace(sortOrder))
+                {
+                    Customers = await OrderByOnNavigation(sortOrder);
+                }
+                else
+                {
+                    Customers = await GetCustomers();
+                }
+                
                 SqlColumns = _context.GetModelProperties("Customers");
                 ColumnList = new SelectList(SqlColumns, "Id", "Name");
             }
@@ -63,6 +76,17 @@ namespace NorthWindExampleApp4.Pages
                 .Include(c => c.Contact)
                 .Include(c => c.ContactTypeIdentifierNavigation)
                 .OrderByColumn(ordering)
+                .ToListAsync();
+
+        }
+
+        public async Task<List<Customers>> GetCustomers()
+        {
+
+            return await _context.Customers
+                .Include(c => c.CountryIdentifierNavigation)
+                .Include(c => c.Contact)
+                .Include(c => c.ContactTypeIdentifierNavigation)
                 .ToListAsync();
 
         }
