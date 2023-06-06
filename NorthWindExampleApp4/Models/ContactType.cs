@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace NorthWindExampleApp4.Models;
 
@@ -9,6 +10,7 @@ public partial class ContactType
 {
     public int ContactTypeIdentifier { get; set; }
 
+    [Display(Name = "Title")]
     public string ContactTitle { get; set; }
 
     public virtual ICollection<Contacts> Contacts { get; } = new List<Contacts>();

@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace NorthWindExampleApp4.Models;
 
@@ -23,6 +24,7 @@ public partial class Contacts
 
     public virtual ICollection<Customers> Customers { get; } = new List<Customers>();
 
+    [Display(Name = "Contact Name")]
     public  string Name => $"{FirstName} {LastName}";
 
 }

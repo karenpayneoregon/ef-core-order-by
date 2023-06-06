@@ -21,7 +21,7 @@
 </form>
 
 
-<table class="table table-striped">
+<table class="table table-striped table-primary">
     <thead>
         <tr>
             <th>
@@ -30,28 +30,45 @@
                 </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customers[0].Street)
+                <a asp-page="/CustomerView" asp-route-sortOrder="Street">
+                    @Html.DisplayNameFor(model => model.Customers[0].Street)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customers[0].City)
+                <a asp-page="/CustomerView" asp-route-sortOrder="City">
+                    @Html.DisplayNameFor(model => model.Customers[0].City)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customers[0].Region)
+                <a asp-page="/CustomerView" asp-route-sortOrder="Region">
+                    @Html.DisplayNameFor(model => model.Customers[0].Region)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customers[0].PostalCode)
+                <a asp-page="/CustomerView" asp-route-sortOrder="PostalCode">
+                    @Html.DisplayNameFor(model => model.Customers[0].PostalCode)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customers[0].Phone)
+                <a asp-page="/CustomerView" asp-route-sortOrder="Phone">
+                    @Html.DisplayNameFor(model => model.Customers[0].Phone)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customers[0].Fax)
+                <a asp-page="/CustomerView" asp-route-sortOrder="Fax">
+                    @Html.DisplayNameFor(model => model.Customers[0].Fax)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customers[0].ModifiedDate)
+                <a asp-page="/CustomerView" asp-route-sortOrder="ModifiedDate">
+                    @Html.DisplayNameFor(model => model.Customers[0].ModifiedDate)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customers[0].Contact.Name)
+                
+                <a asp-page="/CustomerView" asp-route-sortOrder="Contact.LastName">
+                    @Html.DisplayNameFor(model => model.Customers[0].Contact.Name)
+                </a>
             </th>
             <th>
                 <a asp-page="/CustomerView" asp-route-sortOrder="ContactTypeIdentifierNavigation.ContactTitle">
@@ -63,7 +80,7 @@
                     @Html.DisplayNameFor(model => model.Customers[0].CountryIdentifierNavigation.Name)
                 </a>
             </th>
-            <th></th>
+            
         </tr>
     </thead>
     <tbody>
