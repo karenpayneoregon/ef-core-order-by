@@ -2,23 +2,23 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net10.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="readme.md" />
+		<None Remove="readme.md" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Include="readme.md" />
+		<Content Include="readme.md" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.8" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\EntityFrameworkLibrary\EntityFrameworkLibrary.csproj" />
+		<ProjectReference Include="..\EntityFrameworkLibrary\EntityFrameworkLibrary.csproj" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Spectre.Console" Version="0.44.0" />
@@ -26,4 +26,9 @@
 	<ItemGroup>
 		<PackageReference Include="ConsoleHelperLibrary" Version="1.0.0" />
 	</ItemGroup>
+
+	<PropertyGroup>
+		<!-- for ConsoleConfigurationLibrary dependent package -->
+		<NuGetAuditMode>direct</NuGetAuditMode>
+	</PropertyGroup>
 </Project>

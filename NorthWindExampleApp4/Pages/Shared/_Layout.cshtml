@@ -12,6 +12,12 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
+                <a class="skiplink mb-4"
+                   id="skipper"
+                   asp-fragment="main-content"
+                   aria-label="Skip to content">
+                    Skip to content
+                </a>
                 <strong >Order by sample</strong>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +44,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container-fluid">
-            &copy; 2023 - NorthWindExampleApp4 
+            &copy; @DateTime.Now.Year - NorthWindExampleApp4 
         </div>
     </footer>
 

@@ -5,23 +5,24 @@
     ViewData["Title"] = "Customers";
 }
 
-<h1 class="fs-4">Customers</h1>
+<h1 class="fs-4">Customer list</h1>
 <form method="post">
     <input id="selectedIndex" type="hidden" asp-for="SelectedIndex" />
     <div class="row mb-4 mt-4">
+        <label id="main-content" for="modelColumns">Column names</label>
         <div class="col-md-3">
             <select id="modelColumns" name="Id" class="form-select" asp-items="@Model.ColumnList">
             </select>
 
         </div>
         <div class="col-6">
-            <input type="submit" class="btn btn-outline-dark" value="Order by" asp-page-handler="Submit" />
+            <input type="submit" class="btn btn-outline-dark" value="Order by" asp-page-handler="Submit"/>
         </div>
     </div>
 </form>
 
 
-<table class="table table-striped table-primary">
+<table class="table table-striped">
     <thead>
         <tr>
             <th>

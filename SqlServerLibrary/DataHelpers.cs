@@ -6,9 +6,12 @@ namespace SqlServerLibrary;
 public class DataHelpers
 {
     /// <summary>
-    /// Does database exists
+    /// Checks if a LocalDB database with the specified name exists.
     /// </summary>
-    /// <param name="databaseName">name of database</param>
+    /// <param name="databaseName">The name of the database to check for existence.</param>
+    /// <returns>
+    /// <see langword="true"/> if the database exists; otherwise, <see langword="false"/>.
+    /// </returns>
     public static bool LocalDbDatabaseExists(string databaseName)
     {
         using var cn = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;integrated security=True;Encrypt=False");
